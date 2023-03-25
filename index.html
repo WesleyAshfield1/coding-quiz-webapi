@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <title>Code Quiz</title>
 </head>
-
-
 <body>
-    
-    <header><h1>JavaScript Quiz </h1><header>
-<main>
-    <div id="first">
-        <button id="Start">Start</button>
-    </div>
-    <div id="second"></div>
-    <div id="third"></div>
-
-
-</main>
-    
-
-<footer>
-
-</footer>
-<script src="./script.js"></script>
+    <section class="content">
+    <div id="start-button">
+        <button onclick="startQuiz()">Start Quiz</button>
+      </div>
+    <div id="score"></div>
+    <div id="timer">Time remaining: 80 seconds</div>
+    <div id="quiz" style="display: none;">
+        <div id="question"></div>
+        <div id="choices">
+          <button id="choice0" onclick="checkAnswer(this.innerText)"></button>
+          <button id="choice1" onclick="checkAnswer(this.innerText)"></button>
+          <button id="choice2" onclick="checkAnswer(this.innerText)"></button>
+          <button id="choice3" onclick="checkAnswer(this.innerText)"></button>
+        </div>
+      </div>
+      <div id="high-scores-button">
+        <button onclick="showHighScores()">View High Scores</button>
+      </div>
+      <div id="high-scores" style="display: none;">
+        <ol></ol>
+      </div>
+    </section>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
